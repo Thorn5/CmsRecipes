@@ -15,8 +15,11 @@ function App() {
   };
   useEffect(() => {
     getData();
-  }, [getData]);
+  }, []);
+  console.log(data.items[0].fields.image.fields.file.url);
   return;
 }
 
 export default App;
+
+
