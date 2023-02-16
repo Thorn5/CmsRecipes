@@ -1,13 +1,22 @@
-import './App.css';
+import { useEffect, useState } from "react";
+import { client } from "./client";
 
 function App() {
-  return (
-    <div className="App">
-    <h3>Main Branch</h3>
-    <p>This app was created using a clean bootstrapped react template.</p>
-    <p>The stock react App.js code has been removed.</p>
-    </div>
-  );
+  const [data, setData] = useState([]);
+  const getData = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "recipeEntry",
+      });
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, [getData]);
+  return;
 }
 
 export default App;
