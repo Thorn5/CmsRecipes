@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <GetData data={data} setData={setData}/>
+      {/* <p>{data.items[2].fields.recipeName}</p> */}
     </div>
   )
 }
