@@ -1,11 +1,11 @@
 import "./App.css";
 
+import NavbarComp from "./Component/NavbarComp";
+
 function App() {
   return (
     <div className="App">
-      <h3>Recipes</h3>
-      <p>This app was created using a clean bootstrapped react template.</p>
-      <p>The stock react App.js code has been removed.</p>
+      <NavbarComp />
     </div>
   );
 }
